@@ -49,15 +49,21 @@
 
     <script>
       const noButton = document.getElementById("noButton");
-    
-      noButton.addEventListener("click", (e) => {
-        e.preventDefault();
-    
-        noButton.classList.remove("shake");
-    
-        void noButton.offsetWidth;
-    
-        noButton.classList.add("shake");
+
+      let scale = 1;
+
+      noButton.addEventListener("click", () => {
+      scale -= 0.1;
+
+      if (scale < 0.2) {
+        scale = 0.2;
+      }
+
+      noButton.style.transform = `scale(${scale})`;
+
+      noButton.classList.remove("shake");
+      void noButton.offsetWidth;
+      noButton.classList.add("shake");
       });
     </script>
 
