@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ya te voy a bloquear por grosera</title>
+    <link rel="stylesheet" href="css/yes.css" />
+  </head>
+  <body>
+    <div id="thankyou"><b>Ya te voy a bloquear por grosera</b></div>
+
+    <img id="rizz" src="triste.gif" alt="rizzler god" class="responsive" />
+    <br />
+
+
+    
+    <div class="controls">
+
+      <!--
+      <audio controls autoplay loop>
+          <source src="sadSong.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      -->
+      
+        <div class="buttonRow">
+      
+          <button class="answerButton" onclick="location.href='pregunta.html'">
+            lo siento, me arepiento
+          </button>
+      
+          <button class="answerButton" id="noButton" onclick="location.href='yes.html'">
+            es q es cierto
+          </button>
+      
+        </div>
+      
+    </div>
+
+
+
+
+
+    <!--
+    <button class="button" onclick="location.href='date.html'">
+      Click me UWU
+    </button>
+    -->
+
+    <script>
+      const noButton = document.getElementById("noButton");
+    
+      document.addEventListener("mousemove", (e) => {
+        const rect = noButton.getBoundingClientRect();
+    
+        const distance = Math.sqrt(
+          Math.pow(e.clientX - (rect.left + rect.width / 2), 2) +
+          Math.pow(e.clientY - (rect.top + rect.height / 2), 2)
+        );
+    
+        if (distance < 100) {
+          const randomX = (Math.random() - 0.5) * 300;
+          const randomY = (Math.random() - 0.5) * 90;
+
+          noButton.style.transform =
+          `translate(${randomX}px, ${randomY}px)`;
+        }
+      });
+    </script>
+
+  </body>
+</html>

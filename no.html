@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Be My Valentine</title>
+    <link rel="stylesheet" href="css/valentine.css" />
+  </head>
+  <body>
+
+
+    <div class="hearts">
+        <span>❤️</span>
+        <span>❤️</span>
+        <span>❤️</span>
+        <span>❤️</span>
+        <span>❤️</span>
+        <span>❤️</span>
+        <span>❤️</span>
+        <span>❤️</span>
+      </div>
+
+
+    <div id="valentineQuestion"><b>muchas gracias, te ganaste 10 puntos</b></div>
+    
+    <br />
+    <img src="love.gif" alt="cat asking question" class="responsive" />
+
+    <div class="controls">
+        <audio controls autoplay loop>
+            <source src="sexy.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+   
+
+    <script>
+      document
+        .getElementById("noButton")
+        .addEventListener("click", function () {
+          var yesButton = document.querySelector(
+            'button[onclick*="thankyou.html"]'
+          );
+          var currentFontSize = parseInt(
+            window.getComputedStyle(yesButton).fontSize
+          );
+          yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size by 5px
+        });
+    </script>
+  </body>
+</html>
