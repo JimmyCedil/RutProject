@@ -29,7 +29,7 @@
             lo siento, me arepiento
           </button>
       
-          <button class="answerButton" id="noButton" onclick="location.href='yes.html'">
+          <button class="answerButton" id="noButton">
             es q es cierto
           </button>
       
@@ -50,21 +50,14 @@
     <script>
       const noButton = document.getElementById("noButton");
     
-      document.addEventListener("mousemove", (e) => {
-        const rect = noButton.getBoundingClientRect();
+      noButton.addEventListener("click", (e) => {
+        e.preventDefault();
     
-        const distance = Math.sqrt(
-          Math.pow(e.clientX - (rect.left + rect.width / 2), 2) +
-          Math.pow(e.clientY - (rect.top + rect.height / 2), 2)
-        );
+        noButton.classList.remove("shake");
     
-        if (distance < 100) {
-          const randomX = (Math.random() - 0.5) * 300;
-          const randomY = (Math.random() - 0.5) * 90;
-
-          noButton.style.transform =
-          `translate(${randomX}px, ${randomY}px)`;
-        }
+        void noButton.offsetWidth;
+    
+        noButton.classList.add("shake");
       });
     </script>
 
